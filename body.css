@@ -1,16 +1,55 @@
 body {
     margin: 0;
-    background-color: #3d0707;
+    background-color:#3d0707;
+    position: relative;
+
+
 }
 .background-direita{
-    position: fixed;
+    position: fixed;;
     top: 0;
     right: 0;
     width: 40%;
     height: 100vh;
+    background: url("../images/fundo.jpg") center/ cover no-repeat;
+}
 
-    background: url("../img/fundo.jpg") center/cover no-repeat;
-    z-index: -1;
+body {
+  /* 1. Criamos o gradiente com Preto, Azul Noite e Roxo Metálico */
+  background: linear-gradient(-45deg, #000000, #0a0b2e, #4a148c, #1a1a24);
+  
+  /* 2. Deixamos o fundo 4 vezes maior que a tela para ele ter espaço para se mover */
+  background-size: 400% 400%;
+  
+  /* 3. Ativamos a animação: ela vai durar 15 segundos e repetir infinitamente */
+  animation: pulsarFundo 15s ease-in-out infinite;
+  
+  /* Garantimos que o texto principal seja branco para dar leitura */
+  color: #ffffff;
+  
+  /* Remove as margens padrão do navegador */
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* 4. A mágica do movimento acontece aqui */
+@keyframes pulsarFundo {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header,
+main,
+footer{
+    position: relative;
+    z-index: 1;
 }
 
 
