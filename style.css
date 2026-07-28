@@ -1,0 +1,52 @@
+/* Importação da fonte sci-fi */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+:root {
+  --roxo-seeker: #6a1b9a;     
+  --roxo-neon: #d712faab;        
+  --cinza-aco: #78909c;       
+  --fundo-painel: rgba(10, 11, 46, 0.7); 
+}
+
+/* Aplicando o glow nos títulos */
+h1, h2 , h3, p, li {
+  color: #ffffff;
+  /* O segredo do Glow: camadas de brilho. Uma menor e mais forte, outra mais espalhada */
+  text-shadow: 0 0 10px var(--roxo-neon), 0 0 20px var(--roxo-seeker);
+  text-transform: uppercase; /* Letras maiúsculas para impor autoridade */
+  letter-spacing: 2px; /* Espaçamento mais tecnológico */
+}
+/* Classe para envelopar seções depois (História, Vídeos, Galeria) */
+/*{
+  background-color: var(--fundo-painel);
+  border: 2px solid var(--cinza-aco);
+  padding: 40px;
+  margin: 30px auto;
+  max-width: 900px;
+  
+  
+  box-shadow: 0 0 15px rgba(106, 27, 154, 0.5), inset 0 0 20px rgba(106, 27, 154, 0.3);
+  
+  
+  clip-path: polygon(0 30px, 30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
+  
+  position: relative;
+}*/
+
+/* Detalhe extra: Uma linha de neon que simula um sensor ligado */
+.conteudo{
+  position: relative;
+}
+.conteudo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 100px;
+  height: 4px;
+  background-color: var(--roxo-neon);
+  box-shadow: 0 0 10px var(--roxo-neon);
+}
+#bem-vindo::before {
+    content: none;
+}
