@@ -25,8 +25,21 @@ nav a{
     font-size:12px;
     letter-spacing:2px;
     transition:.3s;
+    border: 2px solid rgba(122,91,255,.4);;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+
 }
 
 nav a:hover{
     color:#9e79ff;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 3rem;
+  margin: 3rem;
+  border: 2px solid var(--fundo-painel);
+  border-radius: 30px;
 }

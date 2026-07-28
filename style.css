@@ -1,21 +1,25 @@
-/* Importação da fonte sci-fi */
+/* Importação da fonte */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
 
 :root {
-  --roxo-seeker: #6a1b9a;     
-  --roxo-neon: #d712faab;        
-  --cinza-aco: #78909c;       
-  --fundo-painel: rgba(10, 11, 46, 0.7); 
+  --roxo-seeker: #6a1b9a;
+  --roxo-neon: #d712faab;
+  --cinza-aco: #78909c;
+  --fundo-painel: rgba(10, 11, 46, 0.7);
 }
 
-/* Aplicando o glow nos títulos */
-h1, h2 , h3, p, li {
+
+h1,
+h2,
+h3,
+p,
+li {
   color: #ffffff;
-  /* O segredo do Glow: camadas de brilho. Uma menor e mais forte, outra mais espalhada */
   text-shadow: 0 0 10px var(--roxo-neon), 0 0 20px var(--roxo-seeker);
-  text-transform: uppercase; /* Letras maiúsculas para impor autoridade */
-  letter-spacing: 2px; /* Espaçamento mais tecnológico */
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
+
 /* Classe para envelopar seções depois (História, Vídeos, Galeria) */
 /*{
   background-color: var(--fundo-painel);
@@ -33,10 +37,10 @@ h1, h2 , h3, p, li {
   position: relative;
 }*/
 
-/* Detalhe extra: Uma linha de neon que simula um sensor ligado */
-.conteudo{
+.conteudo {
   position: relative;
 }
+
 .conteudo::before {
   content: "";
   position: absolute;
@@ -47,6 +51,11 @@ h1, h2 , h3, p, li {
   background-color: var(--roxo-neon);
   box-shadow: 0 0 10px var(--roxo-neon);
 }
-#bem-vindo::before {
-    content: none;
+.banner h2 {
+  background-color: none;
+  box-shadow: none;
+  color: #ffffff;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
 }
