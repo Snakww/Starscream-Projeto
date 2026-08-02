@@ -37,25 +37,20 @@ li {
   position: relative;
 }*/
 
-.conteudo {
-  position: relative;
+
+p,
+.imagens {
+    position: relative;
 }
 
-.conteudo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 30px;
-  width: 100px;
-  height: 4px;
-  background-color: var(--roxo-neon);
-  box-shadow: 0 0 10px var(--roxo-neon);
-}
-.banner h2 {
-  background-color: none;
-  box-shadow: none;
-  color: #ffffff;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: normal;
+p::before,
+.imagens::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 100px;
+    height: 4px;
+    background: var(--roxo-neon);
+    box-shadow: 0 0 10px var(--roxo-neon);
 }
