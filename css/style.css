@@ -1,56 +1,65 @@
-/* Importação da fonte */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
-
-:root {
-  --roxo-seeker: #6a1b9a;
-  --roxo-neon: #d712faab;
-  --cinza-aco: #78909c;
-  --fundo-painel: rgba(10, 11, 46, 0.7);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-
-h1,
-h2,
-h3,
-p,
-li {
+html {
+  scroll-behavior: smooth;
+  background-color: black;
   color: #ffffff;
-  text-shadow: 0 0 10px var(--roxo-neon), 0 0 20px var(--roxo-seeker);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Classe para envelopar seções depois (História, Vídeos, Galeria) */
-/*{
-  background-color: var(--fundo-painel);
-  border: 2px solid var(--cinza-aco);
-  padding: 40px;
-  margin: 30px auto;
-  max-width: 900px;
-  
-  
-  box-shadow: 0 0 15px rgba(106, 27, 154, 0.5), inset 0 0 20px rgba(106, 27, 154, 0.3);
-  
-  
-  clip-path: polygon(0 30px, 30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
-  
-  position: relative;
-}*/
-
-
-p,
-.imagens {
-    position: relative;
+.menu{
+    background-color: blue;
+    display: flex;
+    padding: 20px 10px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    
+}
+.menu img{
+  width: 100px;
+  height: auto;
+}
+.menu-conteudo{
+    max-width: 1200px;
+    padding: 8px 32px;
+   display: flex;
+   justify-content: flex-end;
 }
 
-p::before,
-.imagens::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 30px;
-    width: 100px;
-    height: 4px;
-    background: var(--roxo-neon);
-    box-shadow: 0 0 10px var(--roxo-neon);
+.menu-conteudo a{
+  font-family: 'Orbitron', sans-serif;
+  margin-left: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #be2d39;
+  letter-spacing: 1.6;
+  font-size: 20px;
+}
+
+.secao-texto-imagem{
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  gap: 20px; /* espaço entre imagem e texto */
+}
+
+.logo{
+  flex-shrink: 0;
+  height: auto;
+  width: 100px;
+}
+
+.texto-secao{
+  color: rgb(122, 9, 9);
+  font-weight: 400;
+  font-size: 30px;
+  font-family: 'Aldrich', sans-serif;
+  letter-spacing: 1.6px;
 }
