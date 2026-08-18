@@ -9,15 +9,18 @@
     <link rel="icon" type="image/ico" href="../images/favicon.png" alt="Favicon">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 
 
 </head>
 
 <body>
-    <nav class=menu id="menu"> 
+    <nav class=menu id="menu">
         <div class="secao-texto-imagem">
             <img src="./images/logo.png" alt="Logo Starscream" class="logo">
+
             <span class="texto-secao">STARSCREAM</span>
+
         </div>
         <div class="menu-conteudo">
             <a href="#inicio">Início</a>
@@ -27,16 +30,19 @@
             <a href="#aparicoes">Aparições</a>
             <a href="#curiosidades">Curiosidades</a>
         </div>
-        
+
     </nav>
 
     <header class="capa">
-        <video class="capa-video" src="./images/animacao.mp4" muted playsinline preload="auto"></video>
+        <video muted playsinline preload="auto" class="capa-video" src="./images/animacao.mp4" type="video/mp4"></video>
 
         <div class="capa-conteudo">
 
             <span class="rotulo">DOSSIÊ DECEPTICON // PRIORIDADE ALFA</span>
-            <h1>Starscream</h1>
+            <h1 class="nome-titulo">
+                <span class="titulo-solido">STAR</span>
+                <span class="titulo-contorno">SCREAM</span>
+            </h1>
             <div class="badges">
                 <span class="tag">COMANDANTE AÉREO</span>
                 <span class="separator">·</span>
@@ -47,9 +53,9 @@
             <p class="descricao"> O mais ambicioso dos Decepticons. Segundo em comando apenas por conveniência - sua
                 aspiração ao trono de Megatron nunca foi segredo para ninguém, inclluindo o próprio Megatron.</p>
         </div>
-        <div class="botao botao-capa">
-            <a href="#">ACESSAR DOSSIÊ</a>
-            <a href="#">VER HISTORIA</a>
+        <div class="botoes-capa">
+            <a class="btn btn-preenchido" href="#">ACESSAR DOSSIÊ</a>
+            <a class="btn btn-contornado" href="#">VER HISTORIA</a>
         </div>
         <div class="capa-seta">
             <img src="./images/seta-baixo.png" alt="" class="seta-baixo" width="24" height="24">
@@ -277,6 +283,9 @@
         </p>
 
     </footer>
+    
+    <script src="/js/script.js"></script>
+    
 </body>
 
 </html>
