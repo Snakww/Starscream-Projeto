@@ -35,7 +35,7 @@ main {
 }
 
 .menu {
-  background-color: blue;
+   background: var(--dossie-bg);
   display: flex;
   padding: 20px 10px;
   margin: auto;
@@ -66,8 +66,8 @@ main {
   text-decoration: none;
   font-weight: 700;
   color: #be2d39;
-  letter-spacing: 1.6;
-  font-size: 20px;
+  letter-spacing: 1.9;
+  font-size: 15px;
 }
 
 .secao-texto-imagem {
@@ -501,7 +501,6 @@ main {
 }
 
 .sobre {
-  background: transparent;
   display: flex;
   gap: 48px;
   max-width: 1120px;
@@ -631,7 +630,11 @@ main {
   }
 }
 
-
+.sobre-rule{
+  height: 2px;
+  margin: 40px auto;
+  background: linear-gradient(90deg, var(--dossie-purple), var(--dossie-red) , var(--dossie-orange) 55%, transparent)
+}
 
 
 
