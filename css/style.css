@@ -42,9 +42,15 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: sticky;
+  top: 0;
   z-index: 1000;
   transition: transform 0.3s ease;
 
+}
+
+.menu.menu-rolado {
+  transform: translateY(-100%);
 }
 
 .menu img {
@@ -117,29 +123,32 @@ main {
 }
 
 .capa {
-  background-color: green;
-  min-height: 85vh;
+  position: relative;  
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
-  position: relative;
-  overflow: hidden;
+  overflow: hidden; 
   padding-top: 40px;
   padding-left: 8%;
 }
 
 .capa-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  position: absolute; 
+  inset: 0;            
+  width: 100%;              
+  height: 100%;             
   object-fit: cover;
   object-position: center top;
   z-index: 1;
-  opacity: 0;
+  opacity: 0;                
   pointer-events: none;
+}
+
+.capa-video.visivel {
+  opacity: 1;
 }
 
 .capa-conteudo {
@@ -644,7 +653,16 @@ main {
 
 
 
+.aparecer {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
 
+.aparecer.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
