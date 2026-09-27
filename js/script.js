@@ -10,25 +10,31 @@ function animarCapa() {
     scrollTrigger: {
       trigger: ".capa",
       start: "top top",
-      end: "+=2500",
+      end: "+=3000",
       scrub: 1,
       pin: true
     }
   });
 
-  linhaDoTempo.to(".capa-conteudo, .badges, .capa-seta", {
+  linhaDoTempo.to(".capa-conteudo, .badges, .capa-seta .botoes-capa", {
     opacity: 0,
     scale: 0.6,
-    duration: 0.1
+    duration: 0.3
   }, 0);
 
-  linhaDoTempo.to(video, { opacity: 1, duration: 0.8 }, 0);
+  linhaDoTempo.to(video,
+     { opacity: 1, duration: 0.5 },
+      0);
 
   linhaDoTempo.to(video, {
     currentTime: video.duration || 1,
-    duration: 1,
+    duration: 2,
     ease: "none"
   }, 0);
+    linhaDoTempo.to(video, {
+    opacity: 0,
+    duration: 0.5
+  }, 2); 
 }
 
 if (video.readyState >= 1) {

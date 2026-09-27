@@ -35,7 +35,9 @@ main {
 }
 
 .menu {
-   background: var(--dossie-bg);
+   background: url(../images/menu.svg)  no-repeat center / cover;
+   background-size: cover;
+   background-position: center;
   display: flex;
   padding: 20px 10px;
   margin: auto;
@@ -123,8 +125,12 @@ main {
 }
 
 .capa {
+ background-image: url(../images/background.svg);
+ background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;  
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -147,12 +153,7 @@ main {
   pointer-events: none;
 }
 
-.capa-video.visivel {
-  opacity: 1;
-}
-
 .capa-conteudo {
-  background-color: #be2d39;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,7 +202,7 @@ main {
 .btn-preenchido {
   background: #7c3aed;
   color: #fff;
-  border: none;
+  border: 1.5px solid #6e028f;
 }
 
 .btn-preenchido:hover {
@@ -209,13 +210,13 @@ main {
 }
 
 .btn-contornado {
-  background: transparent;
+  background: rgba(247, 102, 5, 0.568);
   color: black;
   border: 1.5px solid #f97316;
 }
 
 .btn-contornado:hover {
-  background: rgba(130, 63, 20);
+  background: rgb(248, 107, 20);
 }
 
 .capa-seta {
