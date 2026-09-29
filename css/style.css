@@ -76,6 +76,30 @@ main {
   color: #be2d39;
   letter-spacing: 1.9;
   font-size: 15px;
+   position: relative;
+  padding-bottom: 6px; 
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu-conteudo a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--dossie-bg), var(--dossie-red));
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.menu-conteudo a:hover {
+  color: #fa0e0e;
+  text-shadow: 0 0 8px rgba(124, 92, 255, 0.6);
+}
+
+.menu-conteudo a:hover::after {
+  width: 100%;
 }
 
 .secao-texto-imagem {
@@ -197,6 +221,7 @@ main {
   align-items: center;
   gap: 8px;
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .btn-preenchido {
@@ -210,7 +235,7 @@ main {
 }
 
 .btn-contornado {
-  background: rgba(247, 102, 5, 0.568);
+  background: rgb(223, 92, 4);
   color: black;
   border: 1.5px solid #f97316;
 }
@@ -320,12 +345,6 @@ main {
   color: #fff;
   text-transform: uppercase;
   margin: 0;
-}
-
-.Dossie-rule {
-  height: 2px;
-  margin: 22px 0 40px;
-  background: linear-gradient(90deg, var(--dossie-purple), var(--dossie-orange) 55%, transparent);
 }
 
 .Dossie-grid {
@@ -628,6 +647,166 @@ main {
   animation: fadeIn 0.35s ease;
 }
 
+.imagens {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 500px;
+  gap: 15px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.imagens .item-galeria {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--dossie-line);
+  border-radius: 6px;
+}
+
+.imagens .item-galeria.destaque {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.imagens .item-galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.6);
+  transition: filter 0.3s ease, transform 0.4s ease;
+}
+
+.imagens .item-galeria::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: border-color 0.25s ease;
+  pointer-events: none;
+}
+
+.imagens .item-galeria:hover::after {
+  border-color: var(--dossie-purple);
+}
+
+.imagens .item-galeria:hover img {
+  filter: saturate(1.1);
+  transform: scale(1.06);
+}
+
+.galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 64px 24px;
+}
+
+.galeria h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 40px;
+  background: linear-gradient(90deg, #B0160B, #EF6533 45%, var(--dossie-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-seekers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.item-seekers {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--dossie-line);
+  border-radius: 4px;
+  background: var(--dossie-panel);
+}
+
+.item-seekers img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.1);
+  transition: filter 0.35s ease;
+}
+
+.item-seekers:hover img {
+  filter: grayscale(0) contrast(1.05);
+}
+
+.item-seekers::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  top: -10%;
+  background: linear-gradient(90deg, transparent, var(--dossie-red), transparent);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.item-seekers:hover::before {
+  opacity: 1;
+  animation: varrer 0.9s ease forwards;
+}
+
+@keyframes varrer {
+  from { top: -10%; }
+  to { top: 110%; }
+}
+
+.item-seekers .tag-Seeker {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  color: var(--dossie-red);
+  background: rgba(5, 7, 12, 0.7);
+  padding: 2px 6px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+}
+
+.item-seekers:hover .tag-Seeker {
+  opacity: 1;
+}
+
+.seekers h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 14px;
+  background: linear-gradient(90deg, #f0f0f5, var(--dossie-red) 35%, var(--dossie-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -640,10 +819,10 @@ main {
   }
 }
 
-.sobre-rule{
+.linhaColorida {
   height: 2px;
-  margin: 40px auto;
-  background: linear-gradient(90deg, var(--dossie-purple), var(--dossie-red) , var(--dossie-orange) 55%, transparent)
+  margin: 22px 0 40px;
+  background: linear-gradient(90deg, var(--dossie-purple), var(--dossie-orange) 55%, transparent);
 }
 
 

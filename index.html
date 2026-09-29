@@ -10,10 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 </head>
 
@@ -78,7 +80,7 @@
         <section id="historia" class="Dossie">
 
             <h1 class="Dossie-title">Dossiê Tático</h1>
-            <div class="Dossie-rule"></div>
+            <div class="linhaColorida"></div>
 
             <div class="Dossie-grid aparecer">
                 <!-- Painel de dados -->
@@ -135,8 +137,7 @@
                     <div class="Dossie-media">
                         <div class="Dossie-corner Dossie-cornerTl"></div>
                         <div class="Dossie-corner Dossie-cornerBr"></div>
-                        <img src="/images/altmode.png"
-                            alt="Jet F-15 Eagle">
+                        <img src="/images/altmode.png" alt="Jet F-15 Eagle">
                         <div class="Dossie-mediaCaption">// FORMA ALTERNATIVA: F-15 EAGLE</div>
                     </div>
 
@@ -152,7 +153,7 @@
             </div>
 
         </section>
-        
+
         <section class="sobre">
             <div class="texto aparecer">
                 <h2>História de Starscream</h2>
@@ -279,21 +280,72 @@
                 <img src="../images/starscreamg1.jpg" alt="Imagem de Starscream">
             </div>
         </section>
-        <div class="sobre-rule"></div>
-        <section id="galeria">
 
+
+        <section id="galeria" class="galeria">
             <h2>Galeria</h2>
-
             <div class="imagens aparecer">
 
-                <img src="../images/galeria1.jpg" alt="Starscream">
-                <img src="../images/galeria2.jpg" alt="Starscream">
-                <img src="../images/galeria3.jpg" alt="Starscream">
-                <img src="../images/galeria4.jpg" alt="Starscream">
-
+                <div class="item-galeria destaque">
+                    <img src="../images/galeriaDestaque.jpg" alt="Starscream">
+                </div>
+                <div class="item-galeria">
+                    <img src="../images/galeria1.jpg" alt="Starscream">
+                </div>
+                <div class="item-galeria">
+                    <img src="../images/galeria2.jpg" alt="Starscream">
+                </div>
+                <div class="item-galeria">
+                    <img src="../images/galeria3.jpg" alt="Starscream">
+                </div>
+                <div class="item-galeria">
+                    <img src="../images/galeria4.jpg" alt="Starscream">
+                </div>
+                <div class="item-galeria">
+                    <img src="../images/galeria5.jpg" alt="Starscream">
+                </div>
+                <div class="item-galeria">
+                    <img src="../images/galeria6.jpg" alt="Starscream">
+                </div>
+                <div class="item-galeria">
+                    <img src="../images/galeria7.jpg" alt="Starscream">
+                </div>
+                <div class="item-galeria">
+                    <img src="../images/galeria8.jpg" alt="Starscream">
+                </div>
             </div>
 
         </section>
+        <section id="seekers" class="seekers">
+  <h2>S E E K E R S</h2>
+
+  <div class="grid-seekers aparecer">
+    <div class="item-seekers">
+      <img src="./images/seeker1.jpg" alt="Starscream">
+      <span class="tag-Seeker">Starscream</span>
+    </div>
+    <div class="item-seekers">
+      <img src="./images/seeker2.jpg" alt="Skywarp">
+      <span class="tag-Seeker">Skywarp</span>
+    </div>
+     <div class="item-seekers">
+      <img src="./images/seeker3.jpg" alt="Thundercracker">
+      <span class="tag-Seeker">Thundercracker</span>
+    </div>
+     <div class="item-seekers">
+      <img src="./images/seeker4.jpg" alt="Slipstream">
+      <span class="tag-Seeker">Slipstream</span>
+    </div>
+    <div class="item-seekers">
+      <img src="./images/seeker5.jpg" alt="Sunstorm">
+      <span class="tag-Seeker">Sunstorm</span>
+    </div>
+    
+  </div>
+</section>
+
+          <div class="linhaColorida"></div>
+
         <section id="habilidades">
 
             <h2>Habilidades</h2>
@@ -330,11 +382,12 @@
             <h2>Aparições</h2>
             <div class="aparecer">
 
-            <ul>
-                <li>Desenhos animados: "Transformers: Geração 1", "Transformers: Prime", entre outros.</li>
-                <li>Filmes: "Transformers" (2007), "Transformers: A Vingança dos Derrotados" (2009), entre outros.</li>
-                <li>Jogos: "Transformers: War for Cybertron", "Transformers: Fall of Cybertron", entre outros.</li>
-            </ul>
+                <ul>
+                    <li>Desenhos animados: "Transformers: Geração 1", "Transformers: Prime", entre outros.</li>
+                    <li>Filmes: "Transformers" (2007), "Transformers: A Vingança dos Derrotados" (2009), entre outros.
+                    </li>
+                    <li>Jogos: "Transformers: War for Cybertron", "Transformers: Fall of Cybertron", entre outros.</li>
+                </ul>
             </div>
         </section>
 
@@ -366,7 +419,11 @@
 
         <p>
             Projeto HTML & CSS sobre Starscream | 2026
+
         </p>
+        <div>
+            <p>Artes Por: </p>
+        </div>
 
     </footer>
 
