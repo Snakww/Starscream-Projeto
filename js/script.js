@@ -78,3 +78,30 @@ const observador = new IntersectionObserver(function (entradas) {
 blocos.forEach(function (bloco) {
   observador.observe(bloco);
 });
+
+
+(function () {
+  var botoesFiltro = [].slice.call(document.querySelectorAll('.filtros__botao'));
+  var aparicoes = [].slice.call(document.querySelectorAll('.aparicao'));
+  var contador = document.querySelector('.aparicoes__contador');
+  if (!botoesFiltro.length || !aparicoes.length) return;
+
+  botoesFiltro.forEach(function (botao) {
+    botao.addEventListener('click', function () {
+      var categoria = botao.getAttribute('data-filtro');
+      var visiveis = 0;
+
+      botoesFiltro.forEach(function (outro) {
+        outro.setAttribute('aria-pressed', outro === botao);
+      });
+
+      aparicoes.forEach(function (aparicao) {
+        var mostrar = categoria === 'Todos' || aparicao.getAttribute('data-categoria') === categoria;
+        aparicao.hidden = !mostrar;
+        if (mostrar) visiveis++;
+      });
+
+      if (contador) contador.textContent = visiveis + (visiveis === 1 ? ' título' : ' títulos');
+    });
+  });
+})();

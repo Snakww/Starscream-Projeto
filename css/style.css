@@ -805,6 +805,201 @@ main {
   color: transparent;
 }
 
+.aparicoes {
+  padding: 72px 0;
+  color: var(--dossie-text-main);
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.aparicoes * {
+  box-sizing: border-box;
+}
+
+.aparicoes__container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.aparicoes__titulo {
+  margin: 0 0 14px;
+  font-family: 'Orbitron', Impact, sans-serif;
+  font-weight: 900;
+  font-size: clamp(32px, 6vw, 64px);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.aparicoes__divisor {
+  height: 2px;
+  margin-bottom: 48px;
+  background: linear-gradient(90deg, var(--dossie-purple), var(--dossie-orange) 55%, transparent);
+}
+
+/* painel (único elemento com cabeçalho de terminal) */
+.aparicoes__painel {
+  background: var(--dossie-panel);
+  border: 1px solid var(--dossie-line);
+  border-radius: 4px;
+}
+
+.aparicoes__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: var(--dossie-panel-header);
+  border-bottom: 1px solid var(--dossie-line);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dossie-purple);
+}
+
+.aparicoes__contador {
+  color: var(--dossie-text-label);
+  font-weight: 500;
+}
+
+/* filtros */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--dossie-line);
+}
+
+.filtros__botao {
+  padding: 2px 0;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--dossie-text-label);
+  font: 700 11px/1.6 'JetBrains Mono', ui-monospace, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.filtros__botao:hover {
+  color: var(--dossie-text-main);
+}
+
+.filtros__botao:focus-visible {
+  outline: 2px solid var(--dossie-orange);
+  outline-offset: 3px;
+}
+
+.filtros__botao[aria-pressed="true"] {
+  color: var(--dossie-text-main);
+  border-bottom-color: var(--dossie-orange);
+}
+
+/* lista: uma linha por aparição, como na tabela do dossiê */
+.aparicao {
+  border-bottom: 1px solid var(--dossie-line);
+}
+
+.aparicao:last-child {
+  border-bottom: 0;
+}
+
+.aparicao[hidden] {
+  display: none;
+}
+
+.aparicao__resumo {
+  display: grid;
+  grid-template-columns: 64px 1fr auto 20px;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  border-left: 3px solid transparent;
+  list-style: none;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.aparicao__resumo::-webkit-details-marker {
+  display: none;
+}
+
+.aparicao__resumo:hover {
+  background: color-mix(in srgb, var(--dossie-purple) 6%, transparent);
+}
+
+.aparicao__resumo:focus-visible {
+  outline: 2px solid var(--dossie-orange);
+  outline-offset: -2px;
+}
+
+.aparicao[open] > .aparicao__resumo {
+  border-left-color: var(--dossie-orange);
+}
+
+.aparicao__ano {
+  color: var(--dossie-orange);
+  font-weight: 700;
+}
+
+.aparicao__nome {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.aparicao__categoria {
+  color: var(--dossie-purple);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.aparicao__seta {
+  width: 7px;
+  height: 7px;
+  justify-self: end;
+  border-right: 2px solid var(--dossie-text-label);
+  border-bottom: 2px solid var(--dossie-text-label);
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.aparicao[open] .aparicao__seta {
+  transform: rotate(-135deg);
+}
+
+/* detalhes abertos: linhas de rótulo e valor */
+.aparicao__detalhes {
+  padding: 0 18px 14px 85px;
+}
+
+.aparicao__linha {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+  padding: 8px 0;
+  border-top: 1px solid var(--dossie-line);
+  font-size: 12px;
+}
+
+.aparicao__rotulo {
+  color: var(--dossie-text-label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.aparicao__valor {
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+
 
 
 @keyframes fadeIn {
@@ -867,5 +1062,26 @@ main {
 
   .imagem img {
     position: static;
+  }
+}
+
+/* celular */
+@media (max-width: 640px) {
+  .aparicao__resumo {
+    grid-template-columns: 48px 1fr 20px;
+    gap: 12px;
+  }
+
+  .aparicao__categoria {
+    display: none;
+  }
+
+  .aparicao__detalhes {
+    padding-left: 18px;
+  }
+
+  .aparicao__linha {
+    grid-template-columns: 1fr;
+    gap: 2px;
   }
 }

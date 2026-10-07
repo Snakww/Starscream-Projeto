@@ -344,52 +344,483 @@
   </div>
 </section>
 
-          <div class="linhaColorida"></div>
+<div class="linhaColorida"></div>
 
-        <section id="habilidades">
+<section class="aparicoes aparecer" id="aparicoes">
+  <div class="aparicoes__container aparecer">
+    <h2 class="aparicoes__titulo">Aparições</h2>
+    <div class="aparicoes__divisor"></div>
 
-            <h2>Habilidades</h2>
+    <div class="aparicoes__painel">
+      <div class="aparicoes__cabecalho">
+        <span>Registro de aparições</span>
+        <span class="aparicoes__contador">15 títulos</span>
+      </div>
 
-            <div class="cards aparecer">
+      <div class="filtros" role="group" aria-label="Filtrar aparições">
+        <button
+          class="filtros__botao"
+          type="button"
+          data-filtro="Todos"
+          aria-pressed="true"
+        >
+          Todos
+        </button>
+        <button
+          class="filtros__botao"
+          type="button"
+          data-filtro="Animação"
+          aria-pressed="false"
+        >
+          Animação
+        </button>
+        <button
+          class="filtros__botao"
+          type="button"
+          data-filtro="Filme"
+          aria-pressed="false"
+        >
+          Filme
+        </button>
+        <button
+          class="filtros__botao"
+          type="button"
+          data-filtro="Jogo"
+          aria-pressed="false"
+        >
+          Jogo
+        </button>
+        <button
+          class="filtros__botao"
+          type="button"
+          data-filtro="HQ"
+          aria-pressed="false"
+        >
+          HQ
+        </button>
+      </div>
 
-                <div class="card">
-                    <h3>✈️ Voo Supersônico</h3>
-                    <p>Alcança altas velocidades durante o combate.</p>
-                </div>
-
-                <div class="card">
-                    <h3>🚀 Mísseis</h3>
-                    <p>Equipado com armamentos de longo alcance.</p>
-                </div>
-
-                <div class="card">
-                    <h3>🤖 Transformação</h3>
-                    <p>Alterna entre robô e caça militar.</p>
-                </div>
-
-                <div class="card">
-                    <h3>🧠 Inteligência</h3>
-                    <p>É um dos Decepticons mais inteligentes.</p>
-                </div>
-
+      <div class="lista-aparicoes">
+        <details class="aparicao" data-categoria="Animação">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">1984</span>
+            <span class="aparicao__nome">Transformers: Geração 1</span>
+            <span class="aparicao__categoria">Animação</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Desenho animado</span>
             </div>
-
-        </section>
-        <!--Aqui é a seção de aparições, ira conter videos e imagens de aparições do personagem em desenhos, filmes e jogos-->
-
-        <section id="aparicoes">
-
-            <h2>Aparições</h2>
-            <div class="aparecer">
-
-                <ul>
-                    <li>Desenhos animados: "Transformers: Geração 1", "Transformers: Prime", entre outros.</li>
-                    <li>Filmes: "Transformers" (2007), "Transformers: A Vingança dos Derrotados" (2009), entre outros.
-                    </li>
-                    <li>Jogos: "Transformers: War for Cybertron", "Transformers: Fall of Cybertron", entre outros.</li>
-                </ul>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Voz original</span>
+              <span class="aparicao__valor">Chris Latta</span>
             </div>
-        </section>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Forma alternativa</span>
+              <span class="aparicao__valor">F-15 Eagle</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Comandante aéreo e segundo em comando dos Decepticons. Na
+                série, tenta várias vezes tirar Megatron do poder, o que
+                firmou sua fama de ambicioso e traidor. O personagem nasceu
+                de um brinquedo da linha Diaclone, de 1983, que a Hasbro
+                reaproveitou.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="HQ">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">1984</span>
+            <span class="aparicao__nome">Transformers (Marvel Comics)</span>
+            <span class="aparicao__categoria">HQ</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Quadrinhos</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Estreia do personagem nos quadrinhos. A série da Marvel foi
+                publicada junto com a série animada e a linha de brinquedos,
+                e ajudou a apresentar os Decepticons ao público.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Filme">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">1986</span>
+            <span class="aparicao__nome">Transformers: O Filme</span>
+            <span class="aparicao__categoria">Filme</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Filme animado</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Voz original</span>
+              <span class="aparicao__valor">Chris Latta</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Forma alternativa</span>
+              <span class="aparicao__valor">F-15 Eagle</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Participa da batalha de Autobot City, em que vários Autobots
+                são mortos. O filme é um dos grandes marcos da Geração 1 e
+                mudou o rumo da série animada.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Animação">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">1996</span>
+            <span class="aparicao__nome">Beast Wars: Transformers</span>
+            <span class="aparicao__categoria">Animação</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Desenho animado</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Voz original</span>
+              <span class="aparicao__valor">Doug Parker</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                A versão de Geração 1 do personagem reaparece nesta série,
+                que se passa muito tempo depois da guerra original entre
+                Autobots e Decepticons.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Animação">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">2002</span>
+            <span class="aparicao__nome">Transformers: Armada</span>
+            <span class="aparicao__categoria">Animação</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Desenho animado</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Voz original</span>
+              <span class="aparicao__valor">Jack Merluzzi</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Forma alternativa</span>
+              <span class="aparicao__valor">Jato cybertroniano, parecido com um Sukhoi Su-35</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Primeira série da chamada Trilogia Unicron. Nesta versão,
+                ele chega a abandonar Megatron por um breve período, algo
+                que a continuidade trata como canônico.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Filme">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">2007</span>
+            <span class="aparicao__nome">Transformers</span>
+            <span class="aparicao__categoria">Filme</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Filme live-action</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Voz original</span>
+              <span class="aparicao__valor">Charlie Adler</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Forma alternativa</span>
+              <span class="aparicao__valor">F-22 Raptor</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Aparece de forma breve no primeiro filme live-action. Quando
+                Megatron cai, escapa para o espaço para tentar reunir os
+                Decepticons sobreviventes.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Jogo">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">2007</span>
+            <span class="aparicao__nome">Transformers: The Game</span>
+            <span class="aparicao__categoria">Jogo</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Videogame</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Voz original</span>
+              <span class="aparicao__valor">Daniel Ross</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Forma alternativa</span>
+              <span class="aparicao__valor">F-22 Raptor</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Aparece no jogo baseado no filme de 2007, com o visual de
+                caça F-22 Raptor da versão live-action.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Animação">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">2008</span>
+            <span class="aparicao__nome">Transformers: Animated</span>
+            <span class="aparicao__categoria">Animação</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Desenho animado</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Voz original</span>
+              <span class="aparicao__valor">Tom Kenny</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Versão estilizada, de traços marcantes, que reinterpreta o
+                personagem para uma série com identidade própria.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Filme">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">2009</span>
+            <span class="aparicao__nome">A Vingança dos Derrotados</span>
+            <span class="aparicao__categoria">Filme</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Filme live-action</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Voz original</span>
+              <span class="aparicao__valor">Charlie Adler</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Forma alternativa</span>
+              <span class="aparicao__valor">F-22 Raptor</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                É um dos principais vilões do segundo filme da franquia.
+                Esta versão traz glifos cybertronianos gravados no corpo.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Animação">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">2010</span>
+            <span class="aparicao__nome">Transformers: Prime</span>
+            <span class="aparicao__categoria">Animação</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Desenho animado</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Voz original</span>
+              <span class="aparicao__valor">Steve Blum</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Forma alternativa</span>
+              <span class="aparicao__valor">F-16 Fighting Falcon</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Versão moderna do personagem, na série que reconta a guerra
+                entre Autobots e Decepticons na Terra. O mesmo dublador
+                também o interpretou no jogo de O Lado Oculto da Lua.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Jogo">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">2010</span>
+            <span class="aparicao__nome">War for Cybertron</span>
+            <span class="aparicao__categoria">Jogo</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Videogame</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Jogo que mostra a guerra pela Cybertron, antes de os robôs
+                chegarem à Terra. Starscream é personagem jogável na
+                campanha dos Decepticons.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Filme">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">2011</span>
+            <span class="aparicao__nome">O Lado Oculto da Lua</span>
+            <span class="aparicao__categoria">Filme</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Filme live-action</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Voz original</span>
+              <span class="aparicao__valor">Charlie Adler</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Forma alternativa</span>
+              <span class="aparicao__valor">F-22 Raptor</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                É um dos principais vilões do terceiro filme, com
+                comentários sarcásticos sobre Megatron. Morre ao final da
+                história.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Jogo">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">2012</span>
+            <span class="aparicao__nome">Fall of Cybertron</span>
+            <span class="aparicao__categoria">Jogo</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Videogame</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Continuação de War for Cybertron, com campanhas jogáveis
+                tanto dos Autobots quanto dos Decepticons.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Animação">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">2018</span>
+            <span class="aparicao__nome">Transformers: Cyberverse</span>
+            <span class="aparicao__categoria">Animação</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Desenho animado</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Forma alternativa</span>
+              <span class="aparicao__valor">F-15 Eagle</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Série animada de tom mais leve, voltada ao público jovem.
+                Aqui ele volta à forma de F-15 Eagle, como na Geração 1.
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <details class="aparicao" data-categoria="Animação">
+          <summary class="aparicao__resumo">
+            <span class="aparicao__ano">2022</span>
+            <span class="aparicao__nome">Transformers: EarthSpark</span>
+            <span class="aparicao__categoria">Animação</span>
+            <span class="aparicao__seta" aria-hidden="true"></span>
+          </summary>
+          <div class="aparicao__detalhes">
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Mídia</span>
+              <span class="aparicao__valor">Desenho animado</span>
+            </div>
+            <div class="aparicao__linha">
+              <span class="aparicao__rotulo">Sobre</span>
+              <span class="aparicao__valor">
+                Série mais recente da lista, com foco em uma nova geração de
+                Transformers que vive na Terra.
+              </span>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
 
         <section id="curiosidades aparecer">
 
