@@ -13,7 +13,7 @@ html {
 }
 
 main {
-   background: var(--dossie-bg);
+  background: var(--dossie-bg);
   background-image:
     radial-gradient(circle at 15% 0%, rgba(124, 92, 255, 0.08), transparent 40%),
     radial-gradient(circle at 85% 100%, rgba(255, 122, 61, 0.06), transparent 40%);
@@ -35,9 +35,9 @@ main {
 }
 
 .menu {
-   background: url(../images/menu.svg)  no-repeat center / cover;
-   background-size: cover;
-   background-position: center;
+  background: url(../images/menu.svg) no-repeat center / cover;
+  background-size: cover;
+  background-position: center;
   display: flex;
   padding: 20px 10px;
   margin: auto;
@@ -76,8 +76,8 @@ main {
   color: #be2d39;
   letter-spacing: 1.9;
   font-size: 15px;
-   position: relative;
-  padding-bottom: 6px; 
+  position: relative;
+  padding-bottom: 6px;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -149,31 +149,31 @@ main {
 }
 
 .capa {
- background-image: url(../images/background.svg);
- background-size: cover;
+  background-image: url(../images/background.svg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;  
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
-  overflow: hidden; 
+  overflow: hidden;
   padding-top: 40px;
   padding-left: 8%;
 }
 
 .capa-video {
-  position: absolute; 
-  inset: 0;            
-  width: 100%;              
-  height: 100%;             
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center top;
   z-index: 1;
-  opacity: 0;                
+  opacity: 0;
   pointer-events: none;
 }
 
@@ -764,8 +764,13 @@ main {
 }
 
 @keyframes varrer {
-  from { top: -10%; }
-  to { top: 110%; }
+  from {
+    top: -10%;
+  }
+
+  to {
+    top: 110%;
+  }
 }
 
 .item-seekers .tag-Seeker {
@@ -839,7 +844,7 @@ main {
   background: linear-gradient(90deg, var(--dossie-purple), var(--dossie-orange) 55%, transparent);
 }
 
-/* painel (único elemento com cabeçalho de terminal) */
+
 .aparicoes__painel {
   background: var(--dossie-panel);
   border: 1px solid var(--dossie-line);
@@ -901,7 +906,7 @@ main {
   border-bottom-color: var(--dossie-orange);
 }
 
-/* lista: uma linha por aparição, como na tabela do dossiê */
+
 .aparicao {
   border-bottom: 1px solid var(--dossie-line);
 }
@@ -939,7 +944,7 @@ main {
   outline-offset: -2px;
 }
 
-.aparicao[open] > .aparicao__resumo {
+.aparicao[open]>.aparicao__resumo {
   border-left-color: var(--dossie-orange);
 }
 
@@ -974,7 +979,7 @@ main {
   transform: rotate(-135deg);
 }
 
-/* detalhes abertos: linhas de rótulo e valor */
+
 .aparicao__detalhes {
   padding: 0 18px 14px 85px;
 }
@@ -997,6 +1002,165 @@ main {
 .aparicao__valor {
   font-weight: 500;
   line-height: 1.7;
+}
+
+.curio {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 90px 20px;
+}
+
+.curio-titulo {
+  margin-bottom: 36px;
+}
+
+.curio-eyebrow {
+  display: block;
+  font-size: .75rem;
+  letter-spacing: 3px;
+  color: var(--dossie-text-label, #8a8fa3);
+  margin-bottom: 6px;
+}
+
+.curio-titulo h2 {
+  color: var(--dossie-text-main, #e6e8ee);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.curio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 24px;
+}
+
+.curio-card {
+  position: relative;
+  background: var(--dossie-panel, #14161d);
+  border: 1px solid var(--dossie-line, #2a2d3a);
+  border-left: 3px solid var(--dossie-red, #c1121f);
+  padding: 0 0 20px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.curio-card.in {
+  opacity: 1;
+  transform: none;
+}
+
+
+.curio-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 16px;
+  background: var(--dossie-panel-header, #1b1e28);
+  border-bottom: 1px solid var(--dossie-line, #2a2d3a);
+  font-size: .7rem;
+  letter-spacing: 2px;
+  color: var(--dossie-text-label, #8a8fa3);
+}
+
+.curio-card h3 {
+  margin: 18px 16px 12px;
+  padding-right: 120px;
+  /* espaço para o carimbo */
+  color: var(--dossie-text-main, #e6e8ee);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.05rem;
+}
+
+
+.curio-tabela {
+  margin: 0 16px 14px;
+  border-top: 1px solid var(--dossie-line, #2a2d3a);
+}
+
+
+.curio-tabela>div {
+  display: grid;
+  grid-template-columns: 38% 1fr;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--dossie-line, #2a2d3a);
+  font-size: .85rem;
+}
+
+.curio-tabela dt {
+  color: var(--dossie-text-label, #8a8fa3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .72rem;
+  align-self: center;
+}
+
+.curio-tabela dd {
+  margin: 0;
+  color: var(--dossie-text-main, #e6e8ee);
+}
+
+
+.curio-card p {
+  margin: 0 16px;
+  color: var(--dossie-text-dim, #9aa0b4);
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.curio-card p a {
+  color: var(--dossie-orange, #ff8a1f);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.curio-card p a:hover {
+  color: var(--dossie-yellow, #ffd23f);
+}
+
+
+.curio-stamp {
+  position: absolute;
+  top: 46px;
+  right: 14px;
+  z-index: 2;
+  padding: 3px 10px;
+  border: 3px solid var(--dossie-red, #c1121f);
+  color: var(--dossie-red, #c1121f);
+  font-weight: 800;
+  font-size: .75rem;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, .25);
+  transform: rotate(-30deg) scale(3);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.curio-stamp--aberto {
+  border-color: var(--dossie-green, #3ddc84);
+  color: var(--dossie-green, #3ddc84);
+}
+
+.curio-card.in .curio-stamp {
+  animation: curio-bater .45s .5s cubic-bezier(.2, 1.4, .4, 1) forwards;
+}
+
+@keyframes curio-bater {
+  0% {
+    transform: rotate(-30deg) scale(3);
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-12deg) scale(1);
+    opacity: .9;
+  }
 }
 
 
@@ -1040,6 +1204,19 @@ main {
 }
 
 
+@media (prefers-reduced-motion: reduce) {
+  .curio-card {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .curio-card .curio-stamp {
+    animation: none;
+    transform: rotate(-12deg);
+    opacity: .9;
+  }
+}
 
 
 @media (max-width: 860px) {

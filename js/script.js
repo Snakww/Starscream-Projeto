@@ -105,3 +105,19 @@ blocos.forEach(function (bloco) {
     });
   });
 })();
+
+(() => {
+  const cards = document.querySelectorAll('.curio-card');
+  if (!cards.length) return;
+ 
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (!entry.isIntersecting) return;
+      setTimeout(() => entry.target.classList.add('in'), i * 150);
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.25 });
+ 
+  cards.forEach(card => io.observe(card));
+})();
+ 
