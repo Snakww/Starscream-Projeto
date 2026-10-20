@@ -121,3 +121,48 @@ blocos.forEach(function (bloco) {
   cards.forEach(card => io.observe(card));
 })();
  
+
+(() => {
+  const input = document.getElementById('nome-input');
+  const caixa = document.getElementById('nome-resultado');
+  const imagem = document.getElementById('nome-imagem');
+  const texto = document.getElementById('nome-texto');
+  if (!input || !caixa) return;
+ 
+  const NOME = 'anthony';
+  const FOTO = './images/desenho.png';
+  const MENSAGEM = 'Eu te amo ❤️';
+ 
+  // para qualquer outro nome
+  const FOTO_OUTRO = './images/fool.jpg';
+  const MENSAGEM_OUTRO = 'Acesso Negado';
+ 
+  // ignora maiúsculas, acentos e espaços nas pontas
+  const normalizar = (s) =>
+    s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase();
+ 
+  input.addEventListener('input', () => {
+    const digitado = normalizar(input.value);
+ 
+    // campo vazio: esconde tudo
+    if (!digitado) {
+      caixa.hidden = true;
+      return;
+    }
+ 
+    if (digitado === NOME) {
+      imagem.src = FOTO;
+      imagem.alt = 'Anthony';
+      imagem.hidden = false;
+      texto.textContent = MENSAGEM;
+    } else {
+      imagem.src = FOTO_OUTRO;
+      imagem.alt = 'Starscream';
+      imagem.hidden = false;
+      texto.textContent = MENSAGEM_OUTRO;
+    }
+ 
+    caixa.hidden = false;
+  });
+})();
+ 

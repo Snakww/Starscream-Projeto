@@ -893,8 +893,6 @@
       </dl>
       <p>É conhecido por sua inteligência e ambição.</p>
     </article>
- 
-  </div>
 
   <article class="curio-card">
       <span class="curio-stamp curio-stamp--aberto">DECLASSIFICADO</span>
@@ -916,20 +914,25 @@
     <footer>
         <!--quando ele colocar o nome aqui
         aparecer um textinho e foto do boneco-->
-        <input type="text" placeholder="Digite seu Nome">
-
+        <input type="text" id="nome-input" placeholder="Digite seu nome" autocomplete="off" aria-label="Digite seu nome">
+ 
+        <div class="nome-resultado" id="nome-resultado" hidden aria-live="polite">
+            <img id="nome-imagem" src="./images/desenho.png" alt="desenho">
+            <p id="nome-texto"></p>
+        </div>
+ 
         <p>
             Projeto HTML & CSS sobre Starscream | 2026
-
+ 
         </p>
         <div>
             <p>Artes Por: </p>
         </div>
-
+ 
     </footer>
-
+ 
     <script src="/js/script.js"></script>
-
+ 
 </body>
-
+ 
 </html>
