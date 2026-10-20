@@ -19,7 +19,7 @@ Desenvolvi esta página como um projeto de portfólio para praticar a construç�
 - Campo interativo no rodapé que exibe uma resposta conforme o nome digitado.
 - Layout com ajustes para diferentes larguras de tela e suporte a preferência por movimento reduzido em parte das animações.
 
-![telaInicial](image.png)
+![Tela inicial da landing page de Starscream](images/image.png)
 ## Tecnologias e recursos
 
 
