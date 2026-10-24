@@ -191,46 +191,76 @@ blocos.forEach(function (bloco) {
   });
 })();
 
+// ===== Terminal Interativo Decepticon // Teletraan-II =====
 (() => {
   const input = document.getElementById('nome-input');
   const caixa = document.getElementById('nome-resultado');
   const imagem = document.getElementById('nome-imagem');
   const texto = document.getElementById('nome-texto');
   if (!input || !caixa) return;
- 
-  const NOME = 'anthony';
-  const FOTO = './images/desenho.png';
-  const MENSAGEM = 'Eu te amo ❤️';
- 
-  // para qualquer outro nome
-  const FOTO_OUTRO = './images/fool.jpg';
-  const MENSAGEM_OUTRO = 'Acesso Negado';
- 
-  // ignora maiúsculas, acentos e espaços nas pontas
+
   const normalizar = (s) =>
     s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase();
- 
+
+  const COMANDOS = {
+    'anthony': {
+      foto: './images/desenho.png',
+      alt: 'Anthony',
+      mensagem: 'Eu te amo ❤️'
+    },
+    'megatron': {
+      foto: './images/fool.jpg',
+      alt: 'Megatron',
+      mensagem: '"Como ousa invocar o nome daquele tirano? O verdadeiro imperador dos Decepticons sou EU, Starscream!"'
+    },
+    'starscream': {
+      foto: './images/galeriaDestaque.jpg',
+      alt: 'Starscream',
+      mensagem: 'Comandante Supremo da Frota Aérea Seeker. Próximo soberano absoluto de Cybertron.'
+    },
+    'seekers': {
+      foto: './images/seeker1.jpg',
+      alt: 'Esquadrão Seeker',
+      mensagem: 'Esquadrão de Voo Elite: Starscream (Líder), Skywarp (Teleporte), Thundercracker (Sônico), Slipstream & Sunstorm.'
+    },
+    'cybertron': {
+      foto: './images/altmode.png',
+      alt: 'Cybertron',
+      mensagem: 'Planeta natal dos Transformers. Em breve sob nova administração imperial.'
+    },
+    'ajuda': {
+      foto: './images/logo.png',
+      alt: 'Terminal Teletraan',
+      mensagem: 'Comandos reconhecidos: megatron, starscream, seekers, cybertron, anthony.'
+    },
+    'help': {
+      foto: './images/logo.png',
+      alt: 'Terminal Teletraan',
+      mensagem: 'Comandos reconhecidos: megatron, starscream, seekers, cybertron, anthony.'
+    }
+  };
+
   input.addEventListener('input', () => {
     const digitado = normalizar(input.value);
- 
-    // campo vazio: esconde tudo
+
     if (!digitado) {
       caixa.hidden = true;
       return;
     }
- 
-    if (digitado === NOME) {
-      imagem.src = FOTO;
-      imagem.alt = 'Anthony';
+
+    if (COMANDOS[digitado]) {
+      const resp = COMANDOS[digitado];
+      imagem.src = resp.foto;
+      imagem.alt = resp.alt;
       imagem.hidden = false;
-      texto.textContent = MENSAGEM;
+      texto.textContent = resp.mensagem;
     } else {
-      imagem.src = FOTO_OUTRO;
-      imagem.alt = 'Starscream';
+      imagem.src = './images/fool.jpg';
+      imagem.alt = 'Acesso Negado';
       imagem.hidden = false;
-      texto.textContent = MENSAGEM_OUTRO;
+      texto.textContent = 'ACESSO NEGADO // Nível de autorização insuficiente ou comando desconhecido.';
     }
- 
+
     caixa.hidden = false;
   });
 })();

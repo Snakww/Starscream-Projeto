@@ -819,23 +819,31 @@
     </div>
 
     <footer>
-        <!--quando ele colocar o nome aqui
-        aparecer um textinho e foto do boneco-->
-        <input type="text" id="nome-input" placeholder="Digite seu nome" autocomplete="off" aria-label="Digite seu nome">
- 
-        <div class="nome-resultado" id="nome-resultado" hidden aria-live="polite">
-            <img id="nome-imagem" src="./images/desenho.png" alt="desenho">
-            <p id="nome-texto"></p>
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">TERMINAL DE COMANDO // TELETRAAN-II</span>
+            </div>
+            <div class="terminal-body">
+                <p class="terminal-hint">Digite um comando ou credencial (tente: <code>megatron</code>, <code>seekers</code>, <code>starscream</code>, <code>ajuda</code>):</p>
+                <div class="terminal-input-wrapper">
+                    <span class="terminal-prompt">&gt;</span>
+                    <input type="text" id="nome-input" placeholder="Digite uma credencial ou comando..." autocomplete="off" aria-label="Terminal de comando">
+                </div>
+
+                <div class="nome-resultado" id="nome-resultado" hidden aria-live="polite">
+                    <img id="nome-imagem" src="./images/desenho.png" alt="desenho">
+                    <p id="nome-texto"></p>
+                </div>
+            </div>
         </div>
- 
-        <p>
-            Projeto HTML & CSS sobre Starscream | 2026
- 
-        </p>
-        <div>
-            <p>Artes Por: </p>
+
+        <div class="footer-creditos">
+            <p>Projeto Desenvolvido com HTML, CSS & JavaScript • Universo Transformers © Hasbro</p>
+            <p class="footer-sub">Dossiê Não-Oficial do Comandante Starscream | 2026</p>
         </div>
- 
     </footer>
  
    <script src="js/script.js"></script>

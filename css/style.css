@@ -1307,75 +1307,167 @@ main {
   border-left: 3px solid var(--dossie-purple);
 }
 
+/* ===== Footer & Terminal Tático ===== */
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  padding: 40px 20px;
-  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  gap: 24px;
+  padding: 60px 20px 40px;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   color: var(--dossie-text-label);
+  border-top: 1px solid var(--dossie-line);
+  background: #06060c;
 }
- 
-footer input {
+
+.terminal-container {
   width: 100%;
-  max-width: 360px;
-  padding: 14px 22px;
+  max-width: 580px;
   background: var(--dossie-panel);
-  color: var(--dossie-text-main);
   border: 1px solid var(--dossie-line);
-  border-radius: 999px;
-  font: inherit;
-  text-align: center;
-  letter-spacing: 0.05em;
-  outline: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--dossie-panel-header);
+  border-bottom: 1px solid var(--dossie-line);
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-dot.red { background: var(--dossie-red); }
+.terminal-dot.yellow { background: var(--dossie-yellow); }
+.terminal-dot.green { background: var(--dossie-green); }
+
+.terminal-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--dossie-purple);
+  margin-left: 8px;
+  font-weight: 700;
+}
+
+.terminal-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.terminal-hint {
+  font-size: 0.8rem;
+  color: var(--dossie-text-label);
+  line-height: 1.5;
+}
+
+.terminal-hint code {
+  color: var(--dossie-orange);
+  background: rgba(255, 122, 61, 0.12);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.terminal-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #080910;
+  border: 1px solid var(--dossie-line);
+  border-radius: 6px;
+  padding: 0 14px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
- 
-footer input::placeholder {
+
+.terminal-input-wrapper:focus-within {
+  border-color: var(--dossie-purple);
+  box-shadow: 0 0 12px rgba(124, 92, 255, 0.25);
+}
+
+.terminal-prompt {
+  color: var(--dossie-purple);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.terminal-input-wrapper input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--dossie-text-main);
+  padding: 12px 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+}
+
+.terminal-input-wrapper input::placeholder {
   color: var(--dossie-text-dim);
 }
- 
-footer input:focus {
-  border-color: var(--dossie-orange);
-  box-shadow: 0 0 0 4px rgba(255, 122, 61, 0.15);
-}
- 
+
 .nome-resultado {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   width: 100%;
-  max-width: 360px;
   padding: 20px;
-  background: var(--dossie-panel);
+  background: var(--dossie-panel-header);
   border: 1px solid var(--dossie-line);
-  border-top: 3px solid var(--dossie-red);
-  border-radius: 12px;
+  border-top: 3px solid var(--dossie-purple);
+  border-radius: 8px;
   text-align: center;
   animation: fadeIn 0.35s ease;
 }
- 
+
 .nome-resultado[hidden] {
   display: none;
 }
- 
+
 .nome-resultado img {
   width: 100%;
-  max-width: 280px;
-  aspect-ratio: 4 / 5;
+  max-width: 260px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border: 1px solid var(--dossie-line);
-  border-radius: 8px;
+  border-radius: 6px;
 }
- 
+
 .nome-resultado p {
   color: var(--dossie-text-main);
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.footer-creditos {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-creditos p {
+  font-size: 0.82rem;
+  color: var(--dossie-text-label);
+}
+
+.footer-creditos .footer-sub {
+  font-size: 0.72rem;
+  color: var(--dossie-text-dim);
 }
 
 @keyframes curio-bater {
