@@ -45,16 +45,48 @@ if (video.readyState >= 1) {
   video.addEventListener("loadedmetadata", animarCapa);
 }
 
-// ===== Controle da seta ao rolar =====
+// ===== Menu: Efeito ao rolar e Menu Mobile Hambúrguer =====
+const menu = document.getElementById("menu");
+const btnMobile = document.getElementById("menu-mobile-btn");
+const menuConteudo = document.getElementById("menu-conteudo");
+
 window.addEventListener("scroll", function () {
+  const scrollAtual = window.scrollY;
+
+  if (menu) {
+    if (scrollAtual > 60) {
+      menu.classList.add("menu-scrolled");
+    } else {
+      menu.classList.remove("menu-scrolled");
+    }
+  }
+
   if (seta) {
-    if (window.scrollY > 150) {
+    if (scrollAtual > 150) {
       seta.classList.add("escondida");
     } else {
       seta.classList.remove("escondida");
     }
   }
 });
+
+// Toggle Menu Mobile
+if (btnMobile && menuConteudo) {
+  btnMobile.addEventListener("click", () => {
+    const expandido = btnMobile.getAttribute("aria-expanded") === "true";
+    btnMobile.setAttribute("aria-expanded", !expandido);
+    btnMobile.classList.toggle("ativo");
+    menuConteudo.classList.toggle("aberto");
+  });
+
+  menuConteudo.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      btnMobile.classList.remove("ativo");
+      btnMobile.setAttribute("aria-expanded", "false");
+      menuConteudo.classList.remove("aberto");
+    });
+  });
+}
 
 // ===== Blocos aparecendo suavemente ao rolar (fade-in) =====
 const blocos = document.querySelectorAll(".aparecer");
