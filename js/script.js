@@ -10,7 +10,7 @@ function animarCapa() {
     scrollTrigger: {
       trigger: ".capa",
       start: "top top",
-      end: "+=3000",
+      end: "+=1400",
       scrub: 1,
       pin: true
     }
@@ -18,25 +18,25 @@ function animarCapa() {
 
   linhaDoTempo.to(".capa-conteudo, .badges, .capa-seta, .botoes-capa", {
     opacity: 0,
-    scale: 0.6,
-    duration: 0.3
+    scale: 0.85,
+    duration: 0.35
   }, 0);
 
-  linhaDoTempo.to(video, { opacity: 1, duration: 0.5 }, 0);
+  linhaDoTempo.to(video, { opacity: 1, duration: 0.4 }, 0);
 
   linhaDoTempo.to(video, {
     currentTime: video.duration || 1,
-    duration: 2,
+    duration: 1.5,
     ease: "none"
   }, 0);
 
-  linhaDoTempo.to(video, { opacity: 0, duration: 0.5 }, 2);
+  linhaDoTempo.to(video, { opacity: 0, duration: 0.4 }, 1.5);
 
   linhaDoTempo.to(".capa-conteudo, .badges, .botoes-capa", {
     opacity: 1,
     scale: 1,
-    duration: 0.5
-  }, 2.5);
+    duration: 0.4
+  }, 1.9);
 }
 
 if (video.readyState >= 1) {
@@ -45,22 +45,15 @@ if (video.readyState >= 1) {
   video.addEventListener("loadedmetadata", animarCapa);
 }
 
-// ===== Menu esconde ao rolar + botões da capa param de funcionar ao rolar =====
-const menu = document.getElementById("menu");
-
+// ===== Controle da seta ao rolar =====
 window.addEventListener("scroll", function () {
-  if (menu) {
-    if (window.scrollY > 50) {
-      menu.classList.add("menu-rolado");
+  if (seta) {
+    if (window.scrollY > 150) {
+      seta.classList.add("escondida");
     } else {
-      menu.classList.remove("menu-rolado");
+      seta.classList.remove("escondida");
     }
   }
-
-  const rolou = window.scrollY > 50;
-  botoes.forEach((el) => {
-    el.style.pointerEvents = rolou ? "none" : "auto";
-  });
 });
 
 // ===== Blocos aparecendo suavemente ao rolar (fade-in) =====

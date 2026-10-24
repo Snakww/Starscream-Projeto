@@ -225,23 +225,30 @@ main {
 }
 
 .btn-preenchido {
-  background: #7c3aed;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
   color: #fff;
-  border: 1.5px solid #6e028f;
+  border: 1px solid #a78bfa;
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.4);
 }
 
 .btn-preenchido:hover {
-  background: #6d28d9;
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.7);
+  transform: translateY(-2px);
 }
 
 .btn-contornado {
-  background: rgb(223, 92, 4);
-  color: black;
-  border: 1.5px solid #f97316;
+  background: rgba(255, 77, 77, 0.08);
+  color: #fff;
+  border: 1.5px solid var(--dossie-red);
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.2);
 }
 
 .btn-contornado:hover {
-  background: rgb(248, 107, 20);
+  background: var(--dossie-red);
+  color: #fff;
+  box-shadow: 0 0 22px rgba(255, 77, 77, 0.55);
+  transform: translateY(-2px);
 }
 
 .capa-seta {
