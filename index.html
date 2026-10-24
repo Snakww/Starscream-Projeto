@@ -183,64 +183,61 @@
         <section id="galeria" class="galeria">
             <h2>Galeria</h2>
             <div class="imagens aparecer">
-
-                <div class="item-galeria destaque">
-                    <img src="./images/galeriaDestaque.jpg" alt="Starscream">
+                <div class="item-galeria destaque" data-caption="Starscream — Retrato Clássico Decepticon">
+                    <img src="./images/galeriaDestaque.jpg" alt="Starscream — Retrato Clássico Decepticon" loading="lazy">
                 </div>
-                <div class="item-galeria">
-                    <img src="./images/galeria1.jpg" alt="Starscream">
+                <div class="item-galeria" data-caption="Starscream — Pose de Liderança">
+                    <img src="./images/galeria1.jpg" alt="Starscream — Pose de Liderança" loading="lazy">
                 </div>
-                <div class="item-galeria">
-                    <img src="./images/galeria2.jpg" alt="Starscream">
+                <div class="item-galeria" data-caption="Starscream — Combate Aéreo">
+                    <img src="./images/galeria2.jpg" alt="Starscream — Combate Aéreo" loading="lazy">
                 </div>
-                <div class="item-galeria">
-                    <img src="./images/galeria3.jpg" alt="Starscream">
+                <div class="item-galeria" data-caption="Starscream — Ilustração Tática">
+                    <img src="./images/galeria3.jpg" alt="Starscream — Ilustração Tática" loading="lazy">
                 </div>
-                <div class="item-galeria">
-                    <img src="./images/galeria4.jpg" alt="Starscream">
+                <div class="item-galeria" data-caption="Starscream — Modo Caça F-15">
+                    <img src="./images/galeria4.jpg" alt="Starscream — Modo Caça F-15" loading="lazy">
                 </div>
-                <div class="item-galeria">
-                    <img src="./images/galeria5.jpg" alt="Starscream">
+                <div class="item-galeria" data-caption="Starscream — Visão Tridimensional">
+                    <img src="./images/galeria5.jpg" alt="Starscream — Visão Tridimensional" loading="lazy">
                 </div>
-                <div class="item-galeria">
-                    <img src="./images/galeria6.jpg" alt="Starscream">
+                <div class="item-galeria" data-caption="Starscream — Armas Null-Ray em Carga">
+                    <img src="./images/galeria6.jpg" alt="Starscream — Armas Null-Ray em Carga" loading="lazy">
                 </div>
-                <div class="item-galeria">
-                    <img src="./images/galeria7.jpg" alt="Starscream">
+                <div class="item-galeria" data-caption="Starscream — Arte Conceitual de Batalha">
+                    <img src="./images/galeria7.jpg" alt="Starscream — Arte Conceitual de Batalha" loading="lazy">
                 </div>
-                <div class="item-galeria">
-                    <img src="./images/galeria8.jpg" alt="Starscream">
+                <div class="item-galeria" data-caption="Starscream — Esquadrão Seeker">
+                    <img src="./images/galeria8.jpg" alt="Starscream — Esquadrão Seeker" loading="lazy">
                 </div>
             </div>
-
         </section>
-        <section id="seekers" class="seekers">
-  <h2>S E E K E R S</h2>
 
-  <div class="grid-seekers aparecer">
-    <div class="item-seekers">
-      <img src="./images/seeker1.jpg" alt="Starscream">
-      <span class="tag-Seeker">Starscream</span>
-    </div>
-    <div class="item-seekers">
-      <img src="./images/seeker2.jpg" alt="Skywarp">
-      <span class="tag-Seeker">Skywarp</span>
-    </div>
-     <div class="item-seekers">
-      <img src="./images/seeker3.jpg" alt="Thundercracker">
-      <span class="tag-Seeker">Thundercracker</span>
-    </div>
-     <div class="item-seekers">
-      <img src="./images/seeker4.jpg" alt="Slipstream">
-      <span class="tag-Seeker">Slipstream</span>
-    </div>
-    <div class="item-seekers">
-      <img src="./images/seeker5.jpg" alt="Sunstorm">
-      <span class="tag-Seeker">Sunstorm</span>
-    </div>
-    
-  </div>
-</section>
+        <section id="seekers" class="seekers">
+            <h2>Seekers</h2>
+            <div class="grid-seekers aparecer">
+                <div class="item-seekers seeker-starscream">
+                    <img src="./images/seeker1.jpg" alt="Starscream - Líder Seeker" loading="lazy">
+                    <span class="tag-Seeker">Starscream</span>
+                </div>
+                <div class="item-seekers seeker-skywarp">
+                    <img src="./images/seeker2.jpg" alt="Skywarp - Teleporte" loading="lazy">
+                    <span class="tag-Seeker">Skywarp</span>
+                </div>
+                <div class="item-seekers seeker-thundercracker">
+                    <img src="./images/seeker3.jpg" alt="Thundercracker - Boom Sônico" loading="lazy">
+                    <span class="tag-Seeker">Thundercracker</span>
+                </div>
+                <div class="item-seekers seeker-slipstream">
+                    <img src="./images/seeker4.jpg" alt="Slipstream - Estrategista" loading="lazy">
+                    <span class="tag-Seeker">Slipstream</span>
+                </div>
+                <div class="item-seekers seeker-sunstorm">
+                    <img src="./images/seeker5.jpg" alt="Sunstorm - Fusão Solar" loading="lazy">
+                    <span class="tag-Seeker">Sunstorm</span>
+                </div>
+            </div>
+        </section>
 
 <div class="linhaColorida"></div>
 
@@ -810,6 +807,17 @@
 </section>
  
     </main>
+
+    <!-- Modal Lightbox da Galeria -->
+    <div class="lightbox" id="lightbox" hidden aria-modal="true" role="dialog" aria-label="Visualizador de Imagem">
+        <div class="lightbox-overlay" id="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Fechar visualização">&times;</button>
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+        </div>
+    </div>
+
     <footer>
         <!--quando ele colocar o nome aqui
         aparecer um textinho e foto do boneco-->

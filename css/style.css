@@ -716,6 +716,7 @@ main {
   overflow: hidden;
   border: 1px solid var(--dossie-line);
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .imagens .item-galeria.destaque {
@@ -847,6 +848,22 @@ main {
 .item-seekers:hover .tag-Seeker {
   opacity: 1;
 }
+
+/* Cores Táticas de Assinatura para cada Seeker */
+.item-seekers.seeker-starscream:hover { border-color: var(--dossie-red); box-shadow: 0 0 18px rgba(255, 77, 77, 0.35); }
+.item-seekers.seeker-starscream .tag-Seeker { color: #ff5252; border: 1px solid rgba(255, 77, 77, 0.4); }
+
+.item-seekers.seeker-skywarp:hover { border-color: #a855f7; box-shadow: 0 0 18px rgba(168, 85, 247, 0.35); }
+.item-seekers.seeker-skywarp .tag-Seeker { color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); }
+
+.item-seekers.seeker-thundercracker:hover { border-color: #00b4d8; box-shadow: 0 0 18px rgba(0, 180, 216, 0.35); }
+.item-seekers.seeker-thundercracker .tag-Seeker { color: #38bdf8; border: 1px solid rgba(0, 180, 216, 0.4); }
+
+.item-seekers.seeker-slipstream:hover { border-color: #2dd4bf; box-shadow: 0 0 18px rgba(45, 212, 191, 0.35); }
+.item-seekers.seeker-slipstream .tag-Seeker { color: #2dd4bf; border: 1px solid rgba(45, 212, 191, 0.4); }
+
+.item-seekers.seeker-sunstorm:hover { border-color: #f59e0b; box-shadow: 0 0 18px rgba(245, 158, 11, 0.35); }
+.item-seekers.seeker-sunstorm .tag-Seeker { color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
 
 .seekers h2 {
   display: flex;
@@ -1200,6 +1217,94 @@ main {
 
 .curio-card.in .curio-stamp {
   animation: curio-bater .45s .5s cubic-bezier(.2, 1.4, .4, 1) forwards;
+}
+
+/* ===== Lightbox Modal da Galeria ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox:not([hidden]) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 9, 14, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.lightbox-content {
+  position: relative;
+  z-index: 10;
+  max-width: 90vw;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  animation: zoomLightbox 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes zoomLightbox {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 38px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.lightbox-close:hover {
+  color: var(--dossie-red);
+  transform: scale(1.15);
+}
+
+.lightbox-img {
+  max-width: 85vw;
+  max-height: 75vh;
+  object-fit: contain;
+  border: 1px solid var(--dossie-line);
+  box-shadow: 0 0 40px rgba(124, 92, 255, 0.4);
+  border-radius: 6px;
+}
+
+.lightbox-caption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
+  letter-spacing: 0.1em;
+  color: var(--dossie-text-label);
+  text-transform: uppercase;
+  background: rgba(16, 16, 28, 0.85);
+  padding: 8px 18px;
+  border-radius: 4px;
+  border-left: 3px solid var(--dossie-purple);
 }
 
 footer {

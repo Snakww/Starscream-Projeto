@@ -147,6 +147,50 @@ blocos.forEach(function (bloco) {
 })();
  
 
+// ===== Lightbox da Galeria =====
+(() => {
+  const itensGaleria = document.querySelectorAll('.item-galeria');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxOverlay = document.getElementById('lightbox-overlay');
+
+  if (!lightbox || !itensGaleria.length) return;
+
+  function abrirLightbox(imgSrc, caption) {
+    lightboxImg.src = imgSrc;
+    lightboxCaption.textContent = caption || 'Starscream — Arquivo Visual';
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function fecharLightbox() {
+    lightbox.hidden = true;
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  itensGaleria.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      if (img) {
+        const caption = item.getAttribute('data-caption') || img.alt;
+        abrirLightbox(img.src, caption);
+      }
+    });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', fecharLightbox);
+  if (lightboxOverlay) lightboxOverlay.addEventListener('click', fecharLightbox);
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.hidden) {
+      fecharLightbox();
+    }
+  });
+})();
+
 (() => {
   const input = document.getElementById('nome-input');
   const caixa = document.getElementById('nome-resultado');
